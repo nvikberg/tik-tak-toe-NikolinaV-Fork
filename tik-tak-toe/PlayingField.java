@@ -4,7 +4,7 @@ public class PlayingField {
     private JFrame framePlayingField;
     private JPanel panelOuterPlayingField, panelInnerPlayingField;
     private JLabel labelOuterPlayingFieldNorth, labelOuterPlayingFieldSouth;
-    private JButton buttonOne, buttonTwo, buttonThree, buttonFour, buttonFive, buttonSix, buttonSeven, buttonEight, buttonNine;
+    private JButton[][] buttonArray = new JButton[3][3];
     public PlayingField(){
         framePlayingField = new JFrame("TicTacToe");
         framePlayingField.setSize(600, 600);
@@ -24,32 +24,19 @@ public class PlayingField {
         panelOuterPlayingField.add(panelInnerPlayingField, BorderLayout.CENTER);
         panelInnerPlayingField.setLayout(new GridLayout(3,3));
 
-        buttonOne = new JButton();
-        panelInnerPlayingField.add(buttonOne);
+        for( int i = 0; i < 3; i++){
 
-        buttonTwo = new JButton();
-        panelInnerPlayingField.add(buttonTwo);
+            for(int k = 0 ; k < 3; k++){
+                buttonArray[k][i] = new JButton();
 
-        buttonThree = new JButton();
-        panelInnerPlayingField.add(buttonThree);
 
-        buttonFour = new JButton();
-        panelInnerPlayingField.add(buttonFour);
 
-        buttonFive = new JButton();
-        panelInnerPlayingField.add(buttonFive);
+            }
 
-        buttonSix = new JButton();
-        panelInnerPlayingField.add(buttonSix);
 
-        buttonSeven = new JButton();
-        panelInnerPlayingField.add(buttonSeven);
 
-        buttonEight = new JButton();
-        panelInnerPlayingField.add(buttonEight);
+        }
 
-        buttonNine = new JButton();
-        panelInnerPlayingField.add(buttonNine);
 
         framePlayingField.setVisible(true);
     }
