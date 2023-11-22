@@ -25,20 +25,26 @@ public class PlayingField {
         panelInnerPlayingField.setLayout(new GridLayout(3,3));
 
         for( int i = 0; i < 3; i++){
-
             for(int k = 0 ; k < 3; k++){
                 buttonArray[k][i] = new JButton();
-
-
-
             }
-
-
-
         }
 
-
         framePlayingField.setVisible(true);
+    }
+    static void checkForHorizontalLines(){
+        /*buttonArray[0][0] == buttonArray[0][1] && buttonArray[0][1] == buttonArray[0][2];
+        buttonArray[1][1] == buttonArray[1][1] && buttonArray[1][1] == buttonArray[1][2];
+        buttonArray[2][0] == buttonArray[2][1] && buttonArray[2][1] == buttonArray[2][2];*/
+    }
+    static void checkForVerticalLines(){
+        /*buttonArray[0][0] == buttonArray[1][0] && buttonArray[1][0] == buttonArray[2][0];
+        buttonArray[0][1] == buttonArray[1][1] && buttonArray[1][1] == buttonArray[2][1];
+        buttonArray[0][2] == buttonArray[1][2] && buttonArray[1][2] == buttonArray[2][2];*/
+    }
+    static void checkForDiagonalLines(){
+        /*buttonArray[0][0] == buttonArray[1][1] && buttonArray[1][1] == buttonArray[2][2];
+        buttonArray[1][2] == buttonArray[1][1] && buttonArray[1][1] == buttonArray[2][0];*/
     }
 }
 
