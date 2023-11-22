@@ -1,5 +1,3 @@
 public class Main {
-    PlayingField ticTacToeBoard = new PlayingField();
-
-
+    PlayingFields ticTacToeBoard = new PlayingFields();
 }
