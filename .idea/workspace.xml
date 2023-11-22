@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13533d7c-34e3-47d8-b771-600623c77495" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tik-tak-toe/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="13533d7c-34e3-47d8-b771-600623c77495" name="Changes" comment="parent player class">
+      <change afterPath="$PROJECT_DIR$/tik-tak-toe/HumanPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tik-tak-toe/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/tik-tak-toe/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +37,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -50,11 +51,23 @@
       <updated>1700491357649</updated>
       <workItem from="1700491358698" duration="596000" />
       <workItem from="1700645309952" duration="269000" />
-      <workItem from="1700646887061" duration="1973000" />
+      <workItem from="1700646887061" duration="8098000" />
     </task>
+    <task id="LOCAL−00001" summary="parent player class">
+      <option name="closed" value="true" />
+      <created>1700649037087</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1700649037087</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="parent player class" />
+    <option name="LAST_COMMIT_MESSAGE" value="parent player class" />
   </component>
 </project>

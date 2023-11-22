@@ -1,6 +1,9 @@
+import java.util.ActionListener;
 public abstract class Player{
     protected int[] activeCoordinates;
     protected String name;
+    /*We instantiate this as a static and final object to make sure only one is created per session -> reduced resourcepresure*/
+    protected static final ActionListener actonListener = new ActionListener();
 
     protected Player(String nameIn){
         this.name = nameIn;
