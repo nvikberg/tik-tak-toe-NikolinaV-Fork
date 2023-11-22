@@ -5,6 +5,7 @@ public class PlayingField {
     private JPanel panelOuterPlayingField, panelInnerPlayingField;
     private JLabel labelOuterPlayingFieldNorth, labelOuterPlayingFieldSouth;
     private JButton[][] buttonArray = new JButton[3][3];
+    private boolean gameEnds;
     public PlayingField(){
         framePlayingField = new JFrame("TicTacToe");
         framePlayingField.setSize(600, 600);
