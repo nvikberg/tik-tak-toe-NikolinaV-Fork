@@ -42,7 +42,6 @@ public class PlayingField {
             for (int k = 0; k < 3; k++) {
                 buttonArray[k][i] = new JButton();
 
-
             }
 
 
@@ -61,7 +60,26 @@ public class PlayingField {
 
 
             framePlayingField.setVisible(true);
+            public void checkForHorizontalLines(){
+            buttonArray[0][0] == buttonArray[0][1] && buttonArray[0][1] == buttonArray[0][2];
+            buttonArray[1][1] == buttonArray[1][1] && buttonArray[1][1] == buttonArray[1][2];
+            buttonArray[2][0] == buttonArray[2][1] && buttonArray[2][1] == buttonArray[2][2];
+            }
+
+            public void checkForVerticalLines(){
+            buttonArray[0][0] == buttonArray[1][0] && buttonArray[1][0] == buttonArray[2][0];
+            buttonArray[0][1] == buttonArray[1][1] && buttonArray[1][1] == buttonArray[2][1];
+            buttonArray[0][2] == buttonArray[1][2] && buttonArray[1][2] == buttonArray[2][2];
+            }
+
+            public void checkForDiagonalLines(){
+            buttonArray[0][0] == buttonArray[1][1] && buttonArray[1][1] == buttonArray[2][2];
+            buttonArray[1][2] == buttonArray[1][1] && buttonArray[1][1] == buttonArray[2][0];
+            }
+
+
+            }
+        }
     }
-}
 }
 

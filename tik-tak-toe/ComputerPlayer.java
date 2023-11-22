@@ -20,7 +20,7 @@ public class ComputerPlayer extends Player {
      */
 
     @Override
-    protected void makeMove(int[][] strategicMoves) {
+    protected void makeMove(int[] strategicMoves) {
         Random rand = new Random();
         //This will generate what solution we choose
         int solutionIndex = rand.nextInt(0, strategicMoves.length);
