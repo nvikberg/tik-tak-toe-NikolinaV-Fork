@@ -33,19 +33,19 @@ public class PlayingField {
 
         framePlayingField.setVisible(true);
     }
-    static void checkForHorizontalLines(){
-        /*buttonArray[0][0] == buttonArray[0][1] && buttonArray[0][1] == buttonArray[0][2];
+    public void checkForHorizontalLines(){
+        buttonArray[0][0] == buttonArray[0][1] && buttonArray[0][1] == buttonArray[0][2];
         buttonArray[1][1] == buttonArray[1][1] && buttonArray[1][1] == buttonArray[1][2];
-        buttonArray[2][0] == buttonArray[2][1] && buttonArray[2][1] == buttonArray[2][2];*/
+        buttonArray[2][0] == buttonArray[2][1] && buttonArray[2][1] == buttonArray[2][2];
     }
-    static void checkForVerticalLines(){
-        /*buttonArray[0][0] == buttonArray[1][0] && buttonArray[1][0] == buttonArray[2][0];
+    public void checkForVerticalLines(){
+        buttonArray[0][0] == buttonArray[1][0] && buttonArray[1][0] == buttonArray[2][0];
         buttonArray[0][1] == buttonArray[1][1] && buttonArray[1][1] == buttonArray[2][1];
-        buttonArray[0][2] == buttonArray[1][2] && buttonArray[1][2] == buttonArray[2][2];*/
+        buttonArray[0][2] == buttonArray[1][2] && buttonArray[1][2] == buttonArray[2][2];
     }
-    static void checkForDiagonalLines(){
-        /*buttonArray[0][0] == buttonArray[1][1] && buttonArray[1][1] == buttonArray[2][2];
-        buttonArray[1][2] == buttonArray[1][1] && buttonArray[1][1] == buttonArray[2][0];*/
+    public void checkForDiagonalLines(){
+        buttonArray[0][0] == buttonArray[1][1] && buttonArray[1][1] == buttonArray[2][2];
+        buttonArray[1][2] == buttonArray[1][1] && buttonArray[1][1] == buttonArray[2][0];
     }
 }
 
