@@ -14,7 +14,6 @@ public class HumanPlayer extends Player{
             int row = actionListener.nextInt();
             int col = actionListener.nextInt();
 
-            //?setText(String.valueOf(Player)?
         }
         return super.activCoordinates;
     }
