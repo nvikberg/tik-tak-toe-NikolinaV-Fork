@@ -1,14 +1,16 @@
-public abstract class Player{
-    protected int[] activeCoordinates;
+public abstract class Player {
+    protected int[][] activeCoordinates;
     protected String name;
 
-    protected Player(String nameIn){
+    protected char mark;
+
+    protected Player(String nameIn) {
         this.name = nameIn;
         this.activeCoordinates = new int[3][3];
 
-        for(int i = 0; i < 3 ; i++){
+        for (int i = 0; i < 3; i++) {
 
-            for(int k = 0; k < 3 ; k++){
+            for (int k = 0; k < 3; k++) {
                 activeCoordinates[i][k] = 0;
 
             }
@@ -19,4 +21,10 @@ public abstract class Player{
     protected abstract void makeMove();
 
 
+    protected void setMark(char markIn) {
+
+        mark = markIn;
+
+
+    }
 }
