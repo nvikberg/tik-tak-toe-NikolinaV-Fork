@@ -1,7 +1,8 @@
 import java.util.Random;
 
 public class ComputerPlayer extends Player {
-
+    /*We use this array to make sure we randomize an index which corresponds to an x-value in makeMove()*/
+    private final int[] moveArrayXIndices = {0,2,4};
     public ComputerPlayer(){
         /*This instances a player with the name "Dator-spelare"*/
         super("Dator-spelare");
@@ -27,12 +28,15 @@ public class ComputerPlayer extends Player {
         int[] strategicMoves = getStrategicMoves();
 
         // Randomly choose one move from the strategic moves
-        int chosenMoveIndex = rand.nextInt(strategicMoves.length);
-        int chosenMove = strategicMoves[chosenMoveIndex];
+        int chosenMoveIndex = rand.nextInt(0,strategicMoves.length);
+       boolean chosenMoveIndexIsX;
+       for(int i = 0; i < moveArrayXIndices.length ; i++) chosenMoveIndexIsX = (chosenMoveIndex == moveArrayXIndices[i]) ? true : false;
+
+
 
         // Convert the chosenMove into row and column
-        int row = chosenMove / 3;
-        int col = chosenMove % 3;
+        int row = strategicMoves[chosenMoveIndex+1];
+        int col = strategicMoves[chosenMoveIndex];
 
         // Set the chosen coordinates as taken
         activeCoordinates[row][col] = 1;
