@@ -13,6 +13,7 @@ public class PlayingField implements ActionListener{
     private int currentGameNmbr;
     private int currentRoundNmbr;
     private ActionListener buttonListener;
+    private static JButton b= new JButton();
 
     public PlayingField() {
         /*I instance the gamesArray with possible rounds, should be one more than possible rounds and
@@ -44,9 +45,14 @@ public class PlayingField implements ActionListener{
         for (int i = 0; i < 3; i++) {
             for (int k = 0; k < 3; k++) {
                 buttonArray[i][k] = new JButton();
-                buttonArray[i][k].addActionListener(new ButtonListener("click")); //it should listen to whats happening or click
+                buttonArray[i][k].addActionListener(new ActionListener(){
+                                                        @Override
+                                                        public void actionPerformed(ActionEvent e) {
+                                                            b= (JButton) (e.getSource());
+                                                        }
+                                                    };
                 panelInnerPlayingField.add(buttonArray[i][k]);
-            }
+
         }
         /*Alrik-implementation of for-loops*/
         for (int j = 0; j < 3; j++) for(int k = 0; k < 3 ; k++) for(int i = 0 ; i < 11 ; i++)
@@ -90,6 +96,7 @@ public class PlayingField implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
 
+        return null;
     }
 }
 

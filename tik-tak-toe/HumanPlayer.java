@@ -15,24 +15,14 @@ public class HumanPlayer extends Player implements ActionListener{
 
     }
 
-    protected void makeMove(ActionListener bl) {
-
-
-
-        public JButton actionPerformed(ActionEvent e){
-
-            if(buttonArray[][].getTitle().equals("")){
-                makeMove(set.Title(markIn));
-            }
-
-        }
-        JButton pressedButton = bl.actionPerformed(ActionEvent e);
-
-        return super.activeCoordinates;
-    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
 
     }
+
+    protected void makeMove(ActionListener b) {
+
+    }
+
 }

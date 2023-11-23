@@ -1,3 +1,6 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 public abstract class Player {
     protected int[][] activeCoordinates;
     protected String name;
