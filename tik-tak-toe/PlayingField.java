@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-public class PlayingField {
+public class PlayingField implements ActionListener{
     private final char[] xAndO = {'X', 'O'};
     private JFrame framePlayingField;
     private JPanel panelOuterPlayingField, panelInnerPlayingField;
@@ -85,6 +85,11 @@ public class PlayingField {
 
     public void setButtonListener(ActionListener buttonListener) {
         this.buttonListener = buttonListener;
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
     }
 }
 
