@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13533d7c-34e3-47d8-b771-600623c77495" name="Changes" comment="im changing static into pulbic">
+    <list default="true" id="13533d7c-34e3-47d8-b771-600623c77495" name="Changes" comment="Datorn har tre av de bästa möjliga dragen och får ut ett av de dragen varje runda slumpmässigt.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tik-tak-toe/Computer.java" beforeDir="false" afterPath="$PROJECT_DIR$/tik-tak-toe/Computer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tik-tak-toe/ComputerPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/tik-tak-toe/ComputerPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tik-tak-toe/PlayingField.java" beforeDir="false" afterPath="$PROJECT_DIR$/tik-tak-toe/PlayingField.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +67,23 @@
       <option name="project" value="LOCAL" />
       <updated>1700662635884</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="writing it back, got deleted.">
+      <option name="closed" value="true" />
+      <created>1700666832137</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1700666832137</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Datorn har tre av de bästa möjliga dragen och får ut ett av de dragen varje runda slumpmässigt.">
+      <option name="closed" value="true" />
+      <created>1700737809629</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1700737809629</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -78,6 +92,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="parent player class" />
     <MESSAGE value="im changing static into pulbic" />
-    <option name="LAST_COMMIT_MESSAGE" value="im changing static into pulbic" />
+    <MESSAGE value="writing it back, got deleted." />
+    <MESSAGE value="Datorn har tre av de bästa möjliga dragen och får ut ett av de dragen varje runda slumpmässigt." />
+    <option name="LAST_COMMIT_MESSAGE" value="Datorn har tre av de bästa möjliga dragen och får ut ett av de dragen varje runda slumpmässigt." />
   </component>
 </project>
