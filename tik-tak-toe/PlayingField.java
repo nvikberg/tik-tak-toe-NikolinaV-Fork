@@ -15,6 +15,7 @@ public class PlayingField implements ActionListener{
     private ActionListener buttonListener;
     private static JButton b= new JButton();
 
+
     public PlayingField() {
         /*I instance the gamesArray with possible rounds, should be one more than possible rounds and
         and a possibility for 10 games which is more than our proposed bestOutOf3GamesMode */
@@ -54,16 +55,38 @@ public class PlayingField implements ActionListener{
                 panelInnerPlayingField.add(buttonArray[i][k]);
 
         }
+       // initializeGameBoard();
+
         /*Alrik-implementation of for-loops*/
         for (int j = 0; j < 3; j++) for(int k = 0; k < 3 ; k++) for(int h = 0 ; i < 11 ; i++)
             for(int m = 0 ; m < 11 ; m++) {
             playingFieldArray[j][k][i][m] = 0;
-
             }
             framePlayingField.setVisible(true);
             }
         }
+
     /*public void checkForLines(){
+
+    public void initializeGameBoard(){
+        int chooseNow = JOptionPane.showOptionDialog(null, "How many players?", "Players selection",
+                JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null,
+                new String[] {"One Player", "Two Players"}, "One Player");
+
+        boolean oneOrTwoPlayers = (chooseNow == JOptionPane.YES_OPTION);
+        //we initialize JOptionpane to set the players.
+        //we need to have 2 buttons, that says one or two players
+        //we put actionListeners that we couple into boolean, is one player game or no.
+        //it needs to be focues, look at the feature that people have it.
+        for (int i = 0; i < 3; i++){
+            for(int k=0;k< 3;k++){
+                buttonArray[i][k]=new JButton();
+                buttonArray[i][k].addActionListener(new ButtonListener("click")); //it should listen to whats happening or click
+                panelInnerPlayingField.add(buttonArray[i][k]);
+            }
+        }
+
+    public void checkForLines(){
         if(checkbuttonArrayAsThreeSameButtons(
                 buttonArray[0][0], buttonArray[1][1], buttonArray[2][2] ||
                         buttonArray[1][2], buttonArray[1][1], buttonArray[2][0];
