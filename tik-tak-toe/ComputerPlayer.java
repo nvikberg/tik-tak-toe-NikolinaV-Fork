@@ -20,13 +20,67 @@ public class ComputerPlayer extends Player {
      */
 
     @Override
-    protected void makeMove(int[] strategicMoves) {
+    protected void makeMove() {
         Random rand = new Random();
-        //This will generate what solution we choose
-        int solutionIndex = rand.nextInt(0, strategicMoves.length);
-        activeCoordinates[][]
+
+        // Get three strategic moves
+        int[] strategicMoves = getStrategicMoves();
+
+        // Randomly choose one move from the strategic moves
+        int chosenMoveIndex = rand.nextInt(strategicMoves.length);
+        int chosenMove = strategicMoves[chosenMoveIndex];
+
+        // Convert the chosenMove into row and column
+        int row = chosenMove / 3;
+        int col = chosenMove % 3;
+
+        // Set the chosen coordinates as taken
+        activeCoordinates[row][col] = 1;
 
     }
+
+    // Method to get three strategic moves
+    private int[] getStrategicMoves() {
+        int[] moves = new int[3];
+        int moveIndex = 0;
+
+        // Prioritize the center (if it's available)
+        if (activeCoordinates[1][1] == 0) {
+            moves[moveIndex++] = 4; // 4 represents the center in a 3x3 grid
+        }
+
+        // Prioritize edges
+        for (int i = 0; i < 3 && moveIndex < 3; i += 2) {
+            if (activeCoordinates[i][1] == 0) {
+                moves[moveIndex++] = i * 3 + 1; // Convert row and col into a single index
+            }
+            if (activeCoordinates[1][i] == 0 && moveIndex < 3) {
+                moves[moveIndex++] = 1 * 3 + i; // Convert row and col into a single index
+            }
+        }
+
+        // Fill in any remaining empty spots randomly (in this case, corners)
+        Random rand = new Random();
+        while (moveIndex < 3) {
+            int row, col;
+
+            // Keep generating random coordinates until an empty one is found
+            do {
+                row = rand.nextInt(3);
+                col = rand.nextInt(3);
+            } while (activeCoordinates[row][col] != 0);
+
+            // Convert row and col into a single index
+            moves[moveIndex++] = row * 3 + col;
+        }
+
+        return moves;
+    }
+
+
+
+
+
 
     /**This is a getter for the activeCoordinates integer-array
      *
