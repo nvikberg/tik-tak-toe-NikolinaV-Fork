@@ -1,22 +1,38 @@
-import java.util.ActionListener;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class HumanPlayer extends Player{
+public class HumanPlayer extends Player implements ActionListener{
 
     public HumanPlayer(String name){
         super(name);
 
     }
 
+    @Override
+    protected void makeMove() {
 
-    public int[][] getActiveCoordinates(){
-        protected void makeMove() {
-
-            //if button empty -- int Array JButton ...
-            int row = actionListener.nextInt();
-            int col = actionListener.nextInt();
-
-        }
-        return super.activCoordinates;
     }
 
+    protected void makeMove(ActionListener bl) {
+
+
+
+        public JButton actionPerformed(ActionEvent e){
+
+            if(buttonArray[][].getTitle().equals("")){
+                makeMove(set.Title(markIn));
+            }
+
+        }
+        JButton pressedButton = bl.actionPerformed(ActionEvent e);
+
+        return super.activeCoordinates;
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+    }
 }
