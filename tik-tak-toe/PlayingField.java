@@ -12,6 +12,7 @@ public class PlayingField {
     private int[][][][] playingFieldArray;
     private int currentGameNmbr;
     private int currentRoundNmbr;
+    private ActionListener buttonListener;
 
     public PlayingField() {
         /*I instance the gamesArray with possible rounds, should be one more than possible rounds and
@@ -41,10 +42,9 @@ public class PlayingField {
 
         //initialize the buttonArray into our game board
         for (int i = 0; i < 3; i++) {
-
             for (int k = 0; k < 3; k++) {
                 buttonArray[i][k] = new JButton();
-                buttonArray[i][k].addActionListener(new ButtonListener(i,k));
+                buttonArray[i][k].addActionListener(new ButtonListener("click")); //it should listen to whats happening or click
                 panelInnerPlayingField.add(buttonArray[i][k]);
             }
         }
@@ -79,5 +79,12 @@ public class PlayingField {
         J1.getText().equals(J2.getText()) &&
         J2.getText().equals(J3.getText());
         }
+    public ActionListener getbuttonListener() {
+        return buttonListener;
+    }
+
+    public void setButtonListener(ActionListener buttonListener) {
+        this.buttonListener = buttonListener;
+    }
 }
 
