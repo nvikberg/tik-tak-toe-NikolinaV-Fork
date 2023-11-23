@@ -48,14 +48,14 @@ public class PlayingField implements ActionListener{
                 buttonArray[i][k].addActionListener(new ActionListener(){
                                                         @Override
                                                         public void actionPerformed(ActionEvent e) {
-                                                            b= (JButton) (e.getSource());
+                                                            b = (JButton) (e.getSource());
                                                         }
-                                                    };
+                                                    });
                 panelInnerPlayingField.add(buttonArray[i][k]);
 
         }
         /*Alrik-implementation of for-loops*/
-        for (int j = 0; j < 3; j++) for(int k = 0; k < 3 ; k++) for(int i = 0 ; i < 11 ; i++)
+        for (int j = 0; j < 3; j++) for(int k = 0; k < 3 ; k++) for(int h = 0 ; i < 11 ; i++)
             for(int m = 0 ; m < 11 ; m++) {
             playingFieldArray[j][k][i][m] = 0;
 
@@ -63,7 +63,7 @@ public class PlayingField implements ActionListener{
             framePlayingField.setVisible(true);
             }
         }
-    public void checkForLines(){
+    /*public void checkForLines(){
         if(checkbuttonArrayAsThreeSameButtons(
                 buttonArray[0][0], buttonArray[1][1], buttonArray[2][2] ||
                         buttonArray[1][2], buttonArray[1][1], buttonArray[2][0];
@@ -84,7 +84,7 @@ public class PlayingField implements ActionListener{
         return !J1.getText().equals("")&&
         J1.getText().equals(J2.getText()) &&
         J2.getText().equals(J3.getText());
-        }
+        }*/
     public ActionListener getbuttonListener() {
         return buttonListener;
     }
@@ -93,10 +93,13 @@ public class PlayingField implements ActionListener{
         this.buttonListener = buttonListener;
     }
 
+    public JButton getB() {
+         return b;
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        return null;
     }
 }
 

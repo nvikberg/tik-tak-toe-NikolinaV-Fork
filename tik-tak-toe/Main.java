@@ -1,3 +1,7 @@
 public class Main {
-    PlayingField ticTacToeBoard = new PlayingField();
+    public static void main(String[] args){
+
+        PlayingField ticTacToeBoard = new PlayingField();
+    }
+
 }

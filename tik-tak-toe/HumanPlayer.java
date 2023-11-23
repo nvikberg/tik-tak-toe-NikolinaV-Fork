@@ -15,6 +15,9 @@ public class HumanPlayer extends Player implements ActionListener{
 
     }
 
+    //i makeMove uppdatera activeCoordinates med input från knapplatsen
+    //if-sats om occupied
+
 
     @Override
     public void actionPerformed(ActionEvent e) {

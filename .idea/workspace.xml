@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13533d7c-34e3-47d8-b771-600623c77495" name="Changes" comment="im changing static into pulbic">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tik-tak-toe/Computer.java" beforeDir="false" afterPath="$PROJECT_DIR$/tik-tak-toe/Computer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tik-tak-toe/ComputerPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/tik-tak-toe/ComputerPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tik-tak-toe/HumanPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/tik-tak-toe/HumanPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tik-tak-toe/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/tik-tak-toe/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tik-tak-toe/PlayingField.java" beforeDir="false" afterPath="$PROJECT_DIR$/tik-tak-toe/PlayingField.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
