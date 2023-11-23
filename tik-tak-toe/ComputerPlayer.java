@@ -78,10 +78,6 @@ public class ComputerPlayer extends Player {
     }
 
 
-
-
-
-
     /**This is a getter for the activeCoordinates integer-array
      *
      *

@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 public class PlayingField {
     private final char[] xAndO = {'X', 'O'};
     private JFrame framePlayingField;
@@ -37,49 +39,45 @@ public class PlayingField {
         panelOuterPlayingField.add(panelInnerPlayingField, BorderLayout.CENTER);
         panelInnerPlayingField.setLayout(new GridLayout(3, 3));
 
+        //initialize the buttonArray into our game board
         for (int i = 0; i < 3; i++) {
 
             for (int k = 0; k < 3; k++) {
-                buttonArray[k][i] = new JButton();
-
+                buttonArray[i][k] = new JButton();
+                buttonArray[i][k].addActionListener(new ButtonListener(i,k));
+                panelInnerPlayingField.add(buttonArray[i][k]);
             }
-
-
         }
         /*Alrik-implementation of for-loops*/
         for (int j = 0; j < 3; j++) for(int k = 0; k < 3 ; k++) for(int i = 0 ; i < 11 ; i++)
             for(int m = 0 ; m < 11 ; m++) {
             playingFieldArray[j][k][i][m] = 0;
 
-
             }
-
-
-
-
-
-
             framePlayingField.setVisible(true);
-            public void checkForHorizontalLines(){
-            buttonArray[0][0] == buttonArray[0][1] && buttonArray[0][1] == buttonArray[0][2];
-            buttonArray[1][1] == buttonArray[1][1] && buttonArray[1][1] == buttonArray[1][2];
-            buttonArray[2][0] == buttonArray[2][1] && buttonArray[2][1] == buttonArray[2][2];
-            }
-
-            public void checkForVerticalLines(){
-            buttonArray[0][0] == buttonArray[1][0] && buttonArray[1][0] == buttonArray[2][0];
-            buttonArray[0][1] == buttonArray[1][1] && buttonArray[1][1] == buttonArray[2][1];
-            buttonArray[0][2] == buttonArray[1][2] && buttonArray[1][2] == buttonArray[2][2];
-            }
-
-            public void checkForDiagonalLines(){
-            buttonArray[0][0] == buttonArray[1][1] && buttonArray[1][1] == buttonArray[2][2];
-            buttonArray[1][2] == buttonArray[1][1] && buttonArray[1][1] == buttonArray[2][0];
-            }
-
-
             }
         }
+    public void checkForLines(){
+        if(checkbuttonArrayAsThreeSameButtons(
+                buttonArray[0][0], buttonArray[1][1], buttonArray[2][2] ||
+                        buttonArray[1][2], buttonArray[1][1], buttonArray[2][0];
+        ) //then gameEnds or something(?)
+        if(checkbuttonArrayAsThreeSameButtons(
+                buttonArray[0][0], buttonArray[0][1], buttonArray[0][2] ||
+                        buttonArray[1][1], buttonArray[1][1], buttonArray[1][2] ||
+                        buttonArray[2][0], buttonArray[2][1], buttonArray[2][2];
+        ) //then gameEnds or something(?)
+        if(checkbuttonArrayAsThreeSameButtons(
+                buttonArray[0][0], buttonArray[1][0], buttonArray[2][0] ||
+                        buttonArray[0][1], buttonArray[1][1], buttonArray[2][1] ||
+                        buttonArray[0][2], buttonArray[1][2], buttonArray[2][2]
+        ) //then gameEnds or something(?)
     }
+
+    private boolean checkbuttonArrayAsThreeSameButtons(JButton J1, JButton J2, JButton J3){
+        return !J1.getText().equals("")&&
+        J1.getText().equals(J2.getText()) &&
+        J2.getText().equals(J3.getText());
+        }
 }
 

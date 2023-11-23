@@ -22,9 +22,7 @@ public abstract class Player {
 
 
     protected void setMark(char markIn) {
-
         mark = markIn;
-
 
     }
 }
