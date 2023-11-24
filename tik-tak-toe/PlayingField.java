@@ -53,18 +53,9 @@ public class PlayingField implements ActionListener {
                         @Override
                         public void actionPerformed(ActionEvent e) {
                             b = (JButton) (e.getSource());
-                            if (!gameisOver && /*a box is still empty*/){
-                            /*the box that is still empty gotta be set with a string that the current player have,
-                            basically their char mark*/
-                                /*check for the lines if they are winning or not, use the gameIsOver boolean inside the
-                                checking method to break them, going to work as the break the loop if they win(?)*/
-                                /*assign the current player into char X or char O again, aka takes turn*/
-                                /*keeping the score aka put the counter in for ex. scoreX = scoreX +1 or viceversa with setText*/
-                            }
-                        }/*popping up box, congrats X or O is winning*/
+                        }
                     });
-                    panelInnerPlayingField.add(buttonArray[i][k]); //present a new clean button again to be played, maybe ask again
-                    /*if the want to play again or not(?*/
+                    panelInnerPlayingField.add(buttonArray[i][k]);
                 }
             }
                 // initializeGameBoard();
