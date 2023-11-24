@@ -73,11 +73,9 @@ public class ComputerPlayer extends Player {
                 row = rand.nextInt(3);
                 col = rand.nextInt(3);
             } while (activeCoordinates[row][col] != 0);
-
             // Convert row and col into a single index
             moves[moveIndex++] = row * 3 + col;
         }
-
         return moves;
     }
 

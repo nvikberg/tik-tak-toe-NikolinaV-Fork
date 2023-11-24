@@ -14,6 +14,9 @@ public class PlayingField implements ActionListener {
     private int currentRoundNmbr;
     private ActionListener buttonListener;
     private static JButton b = new JButton();
+    private boolean gameisOver;
+    private int scoreX = 0;
+    private int scoreO = 0;
 
 
     public PlayingField() {
@@ -43,8 +46,6 @@ public class PlayingField implements ActionListener {
         panelInnerPlayingField.setLayout(new GridLayout(3, 3));
 
         //initialize the buttonArray into our game board
-
-
             for (int i = 0; i < 3; i++) {
                 for (int k = 0; k < 3; k++) {
                     buttonArray[i][k] = new JButton();
@@ -52,10 +53,18 @@ public class PlayingField implements ActionListener {
                         @Override
                         public void actionPerformed(ActionEvent e) {
                             b = (JButton) (e.getSource());
-                        }
+                            if (!gameisOver && /*a box is still empty*/){
+                            /*the box that is still empty gotta be set with a string that the current player have,
+                            basically their char mark*/
+                                /*check for the lines if they are winning or not, use the gameIsOver boolean inside the
+                                checking method to break them, going to work as the break the loop if they win(?)*/
+                                /*assign the current player into char X or char O again, aka takes turn*/
+                                /*keeping the score aka put the counter in for ex. scoreX = scoreX +1 or viceversa with setText*/
+                            }
+                        }/*popping up box, congrats X or O is winning*/
                     });
-                    panelInnerPlayingField.add(buttonArray[i][k]);
-
+                    panelInnerPlayingField.add(buttonArray[i][k]); //present a new clean button again to be played, maybe ask again
+                    /*if the want to play again or not(?*/
                 }
             }
                 // initializeGameBoard();
@@ -67,10 +76,6 @@ public class PlayingField implements ActionListener {
                             for (int m = 0; m < 11; m++) {
                                 playingFieldArray[j][k][h][m] = 0;
                             }
-
-
-
-
         framePlayingField.setVisible(true);
         }
 
