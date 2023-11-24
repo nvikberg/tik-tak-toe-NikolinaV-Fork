@@ -14,6 +14,9 @@ public class PlayingField implements ActionListener {
     private int currentRoundNmbr;
     private ActionListener buttonListener;
     private static JButton b = new JButton();
+    private boolean gameisOver;
+    private int scoreX = 0;
+    private int scoreO = 0;
 
 
     public PlayingField() {
@@ -43,8 +46,6 @@ public class PlayingField implements ActionListener {
         panelInnerPlayingField.setLayout(new GridLayout(3, 3));
 
         //initialize the buttonArray into our game board
-
-
             for (int i = 0; i < 3; i++) {
                 for (int k = 0; k < 3; k++) {
                     buttonArray[i][k] = new JButton();
@@ -55,7 +56,6 @@ public class PlayingField implements ActionListener {
                         }
                     });
                     panelInnerPlayingField.add(buttonArray[i][k]);
-
                 }
             }
                 // initializeGameBoard();
@@ -67,10 +67,6 @@ public class PlayingField implements ActionListener {
                             for (int m = 0; m < 11; m++) {
                                 playingFieldArray[j][k][h][m] = 0;
                             }
-
-
-
-
         framePlayingField.setVisible(true);
         }
 
