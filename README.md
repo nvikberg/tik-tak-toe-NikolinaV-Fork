@@ -18,7 +18,11 @@ Computer player class: this defines an AI player that strategically selects move
 
 
 The codes developed as the project for JAVA Development Class in division (with everyone having access as main contributors to github);
+
 Samuel: Leader of the group and is in charge of AI development and Computer class.
+
 Adam: is in charge of AI development and computer class.
+
 Lovisa: is in charge of the Human player class.
+
 Salim: is in charge of the Layout of the gameboard.
