@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-public class PlayingField implements ActionListener{
+public class PlayingField implements ActionListener {
     private final char[] xAndO = {'X', 'O'};
     private JFrame framePlayingField;
     private JPanel panelOuterPlayingField, panelInnerPlayingField;
@@ -13,7 +13,7 @@ public class PlayingField implements ActionListener{
     private int currentGameNmbr;
     private int currentRoundNmbr;
     private ActionListener buttonListener;
-    private static JButton b= new JButton();
+    private static JButton b = new JButton();
 
 
     public PlayingField() {
@@ -43,27 +43,35 @@ public class PlayingField implements ActionListener{
         panelInnerPlayingField.setLayout(new GridLayout(3, 3));
 
         //initialize the buttonArray into our game board
-        for (int i = 0; i < 3; i++) {
-            for (int k = 0; k < 3; k++) {
-                buttonArray[i][k] = new JButton();
-                buttonArray[i][k].addActionListener(new ActionListener(){
-                                                        @Override
-                                                        public void actionPerformed(ActionEvent e) {
-                                                            b = (JButton) (e.getSource());
-                                                        }
-                                                    });
-                panelInnerPlayingField.add(buttonArray[i][k]);
 
-        }
-       // initializeGameBoard();
 
-        /*Alrik-implementation of for-loops*/
-        for (int j = 0; j < 3; j++) for(int k = 0; k < 3 ; k++) for(int h = 0 ; i < 11 ; i++)
-            for(int m = 0 ; m < 11 ; m++) {
-            playingFieldArray[j][k][i][m] = 0;
+            for (int i = 0; i < 3; i++) {
+                for (int k = 0; k < 3; k++) {
+                    buttonArray[i][k] = new JButton();
+                    buttonArray[i][k].addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            b = (JButton) (e.getSource());
+                        }
+                    });
+                    panelInnerPlayingField.add(buttonArray[i][k]);
+
+                }
             }
-            framePlayingField.setVisible(true);
-            }
+                // initializeGameBoard();
+                playingFieldArray = new int[3][3][11][11];
+                /*Alrik-implementation of for-loops*/
+                for (int j = 0; j < 3; j++)
+                    for (int k = 0; k < 3; k++)
+                        for (int h = 0; h < 11; h++)
+                            for (int m = 0; m < 11; m++) {
+                                playingFieldArray[j][k][h][m] = 0;
+                            }
+
+
+
+
+        framePlayingField.setVisible(true);
         }
 
     /*public void checkForLines(){
@@ -108,21 +116,16 @@ public class PlayingField implements ActionListener{
         J1.getText().equals(J2.getText()) &&
         J2.getText().equals(J3.getText());
         }*/
-    public ActionListener getbuttonListener() {
-        return buttonListener;
+
+
+        public JButton getB(){
+            return b;
+        }
+
+        @Override
+        public void actionPerformed (ActionEvent e){
+
+        }
     }
 
-    public void setButtonListener(ActionListener buttonListener) {
-        this.buttonListener = buttonListener;
-    }
-
-    public JButton getB() {
-         return b;
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-
-    }
-}
 
