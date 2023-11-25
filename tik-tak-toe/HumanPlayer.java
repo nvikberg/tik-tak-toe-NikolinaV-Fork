@@ -1,5 +1,4 @@
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -10,8 +9,16 @@ public class HumanPlayer extends Player implements ActionListener{
 
     }
 
+    /**
+     * This method lets a HumanPlayer make a move on a PlayingField
+     *
+     *
+     * @param PlayingField pf
+     */
     @Override
-    protected void makeMove() {
+    protected void makeMove(PlayingField pf) {
+       if(pf.getB().getChangeListeners())
+
 
     }
 
@@ -24,8 +31,6 @@ public class HumanPlayer extends Player implements ActionListener{
 
     }
 
-    protected void makeMove(ActionListener b) {
 
-    }
 
 }

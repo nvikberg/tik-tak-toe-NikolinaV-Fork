@@ -13,7 +13,7 @@ public class PlayingField implements ActionListener {
     private int currentGameNmbr;
     private int currentRoundNmbr;
     private ActionListener buttonListener;
-    private static JButton b = new JButton();
+    private JButton b = new JButton();
     private boolean gameisOver;
     private int scoreX = 0;
     private int scoreO = 0;
@@ -58,7 +58,7 @@ public class PlayingField implements ActionListener {
                     panelInnerPlayingField.add(buttonArray[i][k]);
                 }
             }
-                // initializeGameBoard();
+
                 playingFieldArray = new int[3][3][11][11];
                 /*Alrik-implementation of for-loops*/
                 for (int j = 0; j < 3; j++)
@@ -71,15 +71,50 @@ public class PlayingField implements ActionListener {
         }
 
 
+    /**Returns the coordinates of the last clicked button which is updated onClick
+     *
+     *
+     *
+     * @return int[] returnArray = {x,y}
+     */
+    public int[] getCoordinatesOfClickedButton(){
+            int[] returnArray = new int[2];
+            /*Alrik-implemented for-loop structure, fair enough, upon refactoring I get the appeal*/
+            for(int i = 0; i < 3 ; i++) for(int k = 0 ; k < 3 ; k++){
+                if(buttonArray[i][k] == b){
+                    returnArray[0] = i;
+                    returnArray[1] = k;
 
-        public JButton getB(){
-            return b;
+
+                    return returnArray;
+                }
+
+
+
+
+
+
+
+            }
+            return returnArray;
         }
 
         @Override
         public void actionPerformed (ActionEvent e){
 
         }
-    }
+        /*Needed it anyway*/
+        public JButton getB(){
+
+            return b;
+
+        }
+
+    /*Generate moveSet for AI - Implement. Can use activeCoordinates, a playingField should have Players. Implement structure for containing players (acc. to UML)
+    If possible time-wise implement GUI-class instead of having them conjoined (just copy paste with some extra steps). A PlayingField doesn´t paint a screen
+     */
+
+
+}
 
 

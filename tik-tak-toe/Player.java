@@ -28,4 +28,9 @@ public abstract class Player {
         mark = markIn;
 
     }
+
+    /*Needs to be an inParameter because a player is aggregated inside PlayingField so no access otherwise*/
+    protected abstract void makeMove(int[][] strategicMoveSet);
+
+    protected abstract void makeMove(PlayingField pf);
 }

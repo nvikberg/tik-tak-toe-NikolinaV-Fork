@@ -1,6 +1,7 @@
 public class Main {
     public static void main(String[] args){
-        int roundNmbr = 1;
+        /*Hahahaha okay so apparently 1%2 = -1, thought they would use 2*0 as divisor*/
+        int roundNmbr = 2;
         /*When we implement the choice-buttons we neeeeeeeeeeeeeed to change this to 0*/
         Player[] playerArray = new Player[2];
         boolean gameIsOver = false;
@@ -9,7 +10,7 @@ public class Main {
 
         if(chosenNmbrOfPlayers == 1) {
             HumanPlayer player1 = new HumanPlayer("namn");
-            ComputerPlayer player2 =new ComputerPlayer();
+            ComputerPlayer player2 = new ComputerPlayer();
 
 
 
@@ -24,7 +25,7 @@ public class Main {
         }
         while(!gameIsOver){
 
-            playerArray[roundNmbr % 2].makeMove();
+            playerArray[(roundNmbr % 2)].makeMove();
 
             roundNmbr++;
 
