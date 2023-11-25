@@ -13,17 +13,36 @@ public class HumanPlayer extends Player implements ActionListener{
      * This method lets a HumanPlayer make a move on a PlayingField
      *
      *
-     * @param PlayingField pf
+     *
+     *
+     * @param playingField
      */
     @Override
-    protected void makeMove(PlayingField pf) {
-       if(pf.getB().getChangeListeners())
+    protected void makeMove(PlayingField playingField) {
+        boolean moveIsMade = false;
+        /*Because while the move hasnt been made we´re still making a move*/
+      //  while(!moveIsMade){
 
 
-    }
+            if ( (playingField.getGraphicalUserInterface().getB().getText().compareTo("") == 0)) {
+            } else {
+                activeCoordinates[playingField.getGraphicalUserInterface().getCoordinatesOfClickedButton()[0]][playingField.getGraphicalUserInterface().getCoordinatesOfClickedButton()[1]] = 1;
+                //moveIsMade = true;
 
-    //i makeMove uppdatera activeCoordinates med input från knapplatsen
-    //if-sats om occupied
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     @Override

@@ -21,16 +21,24 @@ public abstract class Player {
         }
     }
 
-    protected abstract void makeMove();
-
 
     protected void setMark(char markIn) {
         mark = markIn;
 
     }
 
-    /*Needs to be an inParameter because a player is aggregated inside PlayingField so no access otherwise*/
-    protected abstract void makeMove(int[][] strategicMoveSet);
+    /**
+     * Gets mark of player 'X' || 'O'
+     *
+     * @return markOfPlayer
+     */
+    public char getMark(){
 
+        return mark;
+
+    }
+
+    /*Needs to be an inParameter because a player is aggregated inside PlayingField so no access otherwise*/
     protected abstract void makeMove(PlayingField pf);
+
 }
