@@ -2,13 +2,15 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-public class PlayingField  {
+public class PlayingField implements ActionListener  {
     private final char[] xAndO = {'X', 'O'};
     private GUI graphicalUserInterface;
     private final int[][][][] playingFieldArray;
     private  int currentGameNmbr;
     private  int currentRoundNmbr;
-    private ActionListener buttonListener;
+    /*This lets us store the action-listener objects from the GUI -> When the event is triggered actionPerformed is triggered here too*/
+    private ActionListener[][] buttonListeners;
+
 
     private boolean gameisOver;
     private final int scoreX = 0;
@@ -20,7 +22,13 @@ public class PlayingField  {
     public PlayingField(GUI graphicalUserInterfaceIn) {
         /*When we create a PlayingField the board should be laid out*/
         graphicalUserInterface = graphicalUserInterfaceIn;
+        /*Once the visual field is generated and the player-selection is done we should add our actionlisteners*/
+        JButton[][] buttonArray = graphicalUserInterface.getButtonArray();
+        for(int row = 0 ; row < graphicalUserInterface.getButtonArray()[0].length ; row++) for (int col = 0 ; col < graphicalUserInterface.getButtonArray().length ; col++){
 
+
+
+        }
         currentGameNmbr = 1;
         currentRoundNmbr = 1;
         playingFieldArray = new int[3][3][11][11];
@@ -62,6 +70,12 @@ public void setGraphicalUserInterface(GUI graphicalUserInterfaceIn){
 
     public int getCurrentRoundNmbr() {
         return currentRoundNmbr;
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+       int[] coordinatesOfClickedButton = graphicalUserInterface.getCoordinatesOfClickedButton((JButton)e.getSource());
+       if ()
     }
 }
 
