@@ -11,7 +11,6 @@ public class PlayingField implements ActionListener  {
     /*This lets us store the action-listener objects from the GUI -> When the event is triggered actionPerformed is triggered here too*/
     private ActionListener[][] buttonListeners;
 
-
     private boolean gameisOver;
     private final int scoreX = 0;
     private final int scoreO = 0;
@@ -72,10 +71,28 @@ public void setGraphicalUserInterface(GUI graphicalUserInterfaceIn){
         return currentRoundNmbr;
     }
 
+    /**Upon being called, if the button is not occupied we add to the roundNumber and update the activeCoordinates for the player
+     *
+     *
+     *
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
        int[] coordinatesOfClickedButton = graphicalUserInterface.getCoordinatesOfClickedButton((JButton)e.getSource());
-       if ()
+       if(!(((JButton) e.getSource()).getText().equals(""))){
+          /*Overly clear representation of not doing anything*/
+            currentRoundNmbr = currentRoundNmbr;
+
+
+        }
+        else {
+            /*Since we use modulus we have to parry that 2%1 == -1 and 2%1*/
+
+           playerArray[(currentRoundNmbr+1) % 2].makeMove(this, coordinatesOfClickedButton);
+            currentRoundNmbr++;
+
+        }
     }
 }
 

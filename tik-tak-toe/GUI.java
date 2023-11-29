@@ -159,9 +159,9 @@ public class GUI implements ActionListener {
             /*First round done*/
             roundNmbr++;
         }
-        /*May return null or maybe get some fuckery if "" =(nothing) isnt in the ASCII-table.... well, we´ll see*/
+        /*May return null or maybe get some fuckery if: "" =(nothing) isnt in the ASCII-table.... well, we´ll see*/
         if(b.getText().equalsIgnoreCase("")){
-            b.setText(String.valueOf(oAndX[roundNmbr%2]));
+           b.setText("");
 
 
 

@@ -1,8 +1,9 @@
-import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class HumanPlayer extends Player implements ActionListener{
+        /*These actionlisteners makes sure that we can wait for action before performing move inside makeMove*/
+    ActionLister[][] buttonListeners;
 
     public HumanPlayer(String name){
         super(name);
@@ -15,21 +16,14 @@ public class HumanPlayer extends Player implements ActionListener{
      *
      *
      *
-     * @param playingField
+     * @param playingField, int[] moveCoordinates = {x-coordinate of move, y-coordinate of move}
      */
     @Override
-    protected void makeMove(PlayingField playingField) {
-        boolean moveIsMade = false;
-        /*Because while the move hasnt been made we´re still making a move*/
-      //  while(!moveIsMade){
+    protected void makeMove(PlayingField playingField, int[] moveCoordinates) {
+           super.setActiveCoordinates(moveCoordinates);
 
 
-            if ( (playingField.getGraphicalUserInterface().getB().getText().compareTo("") == 0)) {
-            } else {
-                activeCoordinates[playingField.getGraphicalUserInterface().getCoordinatesOfClickedButton()[0]][playingField.getGraphicalUserInterface().getCoordinatesOfClickedButton()[1]] = 1;
-                //moveIsMade = true;
 
-            }
         }
 
 

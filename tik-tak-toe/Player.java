@@ -5,6 +5,7 @@ public abstract class Player {
     protected int[][] activeCoordinates;
     protected String name;
 
+    /*Realizing this is not technically needed, we infer X or O in GUI with roundNumber*/
     protected char mark;
 
     protected Player(String nameIn) {
@@ -41,4 +42,24 @@ public abstract class Player {
     /*Needs to be an inParameter because a player is aggregated inside PlayingField so no access otherwise*/
     protected abstract void makeMove(PlayingField pf);
 
+    /**This method returns the players current board configuration as a 2D array of integers
+     *
+     *
+     * @return int[][] activeCoordinates = (1 (if occupied) || 0 (if not occupied)) ; activeCoordinates[x][y]
+     *
+     */
+    public int[][] getActiveCoordinates() {
+        return activeCoordinates;
+    }
+
+    /**Sets the array at the specified coordinates to 1
+     *
+     *
+     * @param moveCoordinates = {x-coordinate of move, y-coordinate of move}
+     */
+    public void setActiveCoordinates(int[] moveCoordinates) {
+        activeCoordinates[moveCoordinates[0]][moveCoordinates[1]] = 1;
+    }
+
+    protected abstract void makeMove(PlayingField playingField, int[] moveCoordinates);
 }
