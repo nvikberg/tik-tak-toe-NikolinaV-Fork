@@ -80,6 +80,8 @@ public void setGraphicalUserInterface(GUI graphicalUserInterfaceIn){
     @Override
     public void actionPerformed(ActionEvent e) {
        int[] coordinatesOfClickedButton = graphicalUserInterface.getCoordinatesOfClickedButton((JButton)e.getSource());
+
+
        if(!(((JButton) e.getSource()).getText().equals(""))){
           /*Overly clear representation of not doing anything*/
             currentRoundNmbr = currentRoundNmbr;
@@ -87,12 +89,22 @@ public void setGraphicalUserInterface(GUI graphicalUserInterfaceIn){
 
         }
         else {
-            /*Since we use modulus we have to parry that 2%1 == -1 and 2%1*/
+            /*Since we use modulus we have to parry that 2%1 = -1 and 2%1 = 0*/
 
            playerArray[(currentRoundNmbr+1) % 2].makeMove(this, coordinatesOfClickedButton);
             currentRoundNmbr++;
+            graphicalUserInterface.drawActiveCoordinates(playerArray);
 
         }
+    }
+
+    /**Gets the actionlisteners imposed on the buttonArray inside GUI
+     *
+     *
+     * @return ActionListener[][] buttonListeners ; ActionLi
+     */
+    public ActionListener[][] getButtonListeners() {
+        return buttonListeners;
     }
 }
 

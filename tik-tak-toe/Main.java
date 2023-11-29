@@ -57,14 +57,15 @@ public class Main {
 
 
         }
-
+        boolean actionMade = false;
         while(!gameIsOver){
 
-            playerArray[(roundNmbr % 2)].makeMove(ticTacToeBoard);
+            if(actionMade){
 
-            graphicalUserInterface.drawActiveCoordinates(playerArray);
-            roundNmbr++;
 
+                /*Resets so we know we´´e watiing for action*/
+                actionMade = false;
+            }
         }
 
 
